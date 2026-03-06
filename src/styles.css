@@ -1,0 +1,89 @@
+/* ============================================================
+   Shared UI Library — Main Stylesheet
+   ============================================================ */
+
+/* Tailwind base */
+@import "tailwindcss";
+
+/* Custom Tailwind design tokens */
+@import "./theme/tailwind-theme.css";
+
+/* DaisyUI plugin */
+@plugin "daisyui";
+
+/* Custom DaisyUI themes */
+@import "./theme/daisyui-theme.css";
+
+/* ── App-specific styles ──────────────────────────────────── */
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: oklch(70% 0 0 / 0.3);
+	border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: oklch(60% 0 0 / 0.5);
+}
+
+/* Code block styling */
+.code-block {
+	position: relative;
+	background: oklch(18% 0.012 264.36);
+	color: oklch(90% 0.01 264.36);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	font-family: var(--font-mono);
+	font-size: 0.8125rem;
+	line-height: 1.6;
+	overflow-x: auto;
+	white-space: pre;
+}
+
+.code-block .copy-btn {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+/* Component preview card */
+.preview-card {
+	border: 1px solid oklch(90% 0.005 264 / 0.6);
+	border-radius: 0.75rem;
+	overflow: hidden;
+	background: var(--color-base-100, #fff);
+}
+
+.preview-area {
+	padding: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	min-height: 5rem;
+	border-bottom: 1px solid oklch(90% 0.005 264 / 0.6);
+}
+
+/* Toast notification */
+.toast-notification {
+	position: fixed;
+	bottom: 1.5rem;
+	right: 1.5rem;
+	z-index: 9999;
+	opacity: 0;
+	transform: translateY(8px);
+	transition: all 0.2s ease-out;
+	pointer-events: none;
+}
+
+.toast-notification.show {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}

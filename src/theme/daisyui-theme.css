@@ -1,0 +1,111 @@
+/* ============================================================
+   Shared UI Library — Custom DaisyUI Theme
+   ============================================================
+   This file defines the custom brand theme for the shared UI
+   library. Import this file in any app that uses the library
+   components to get consistent theming.
+
+   Usage in your app's main CSS:
+     @import "./path-to/daisyui-theme.css";
+   ============================================================ */
+
+/* ── Light theme (default) ────────────────────────────────── */
+@plugin "daisyui/theme" {
+	name: "shared-light";
+	default: true;
+
+	/* Base colors */
+	--color-base-100: oklch(100% 0 0);
+	--color-base-200: oklch(98% 0 0);
+	--color-base-300: oklch(95% 0 0);
+	--color-base-content: oklch(21% 0.006 285.885);
+
+	/* Primary colors */
+	--color-primary: oklch(0.209 0 0);
+	--color-primary-content: oklch(1 0 0);
+
+	/* Secondary colors */
+	--color-secondary: oklch(0.3791 0 0);
+	--color-secondary-content: oklch(1 0 0);
+
+	/* Accent colors */
+	--color-accent: oklch(0.4965 0.1837 19.68);
+	--color-accent-content: oklch(1 0 0);
+
+	/* Neutral colors */
+	--color-neutral: oklch(14% 0.005 285.823);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+
+	/* Semantic colors */
+	--color-info: oklch(0.4875 0.13058 247.7896);
+	--color-info-content: oklch(1 0 0);
+
+	--color-success: oklch(0.4307 0.1393 144.07);
+	--color-success-content: oklch(1 0 0);
+
+	--color-warning: oklch(0.5793 0.1219 75.59);
+	--color-warning-content: oklch(1 0 0);
+
+	--color-error: oklch(0.4293 0.159 19.67);
+	--color-error-content: oklch(1 0 0);
+
+	/* border radius */
+	--radius-selector: 0.5rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.25rem;
+
+	/* base sizes */
+	--size-selector: 0.25rem;
+	--size-field: 0.3rem;
+
+	/* border size */
+	--border: 1px;
+
+	/* effects */
+	--depth: 1;
+	--noise: 0;
+}
+
+/* ── Dark theme ───────────────────────────────────────────── */
+@plugin "daisyui/theme" {
+	name: "shared-dark";
+
+	prefersdark: true;
+
+	--color-primary: oklch(65.08% 0.2145 264.05);
+	--color-primary-content: oklch(15% 0.005 264.05);
+
+	--color-secondary: oklch(72.73% 0.1456 250.47);
+	--color-secondary-content: oklch(15% 0.005 250.47);
+
+	--color-accent: oklch(75.5% 0.17 47.6);
+	--color-accent-content: oklch(15% 0.02 47.6);
+
+	--color-neutral: oklch(82% 0.005 264.05);
+	--color-neutral-content: oklch(18% 0.012 264.05);
+
+	--color-base-100: oklch(18.67% 0.012 264.36);
+	--color-base-200: oklch(22% 0.014 264.36);
+	--color-base-300: oklch(26% 0.016 264.36);
+	--color-base-content: oklch(92% 0.004 264.36);
+
+	--color-info: oklch(62.8% 0.18 250.47);
+	--color-info-content: oklch(98% 0.005 250.47);
+
+	--color-success: oklch(64.8% 0.17 150.26);
+	--color-success-content: oklch(98% 0.005 150.26);
+
+	--color-warning: oklch(74.8% 0.17 62.23);
+	--color-warning-content: oklch(15% 0.02 62.23);
+
+	--color-error: oklch(58.07% 0.22 27.33);
+	--color-error-content: oklch(98% 0.005 27.33);
+
+	--radius-selector: 0.375rem;
+	--radius-field: 0.375rem;
+	--radius-box: 0.5rem;
+
+	--border: 1px;
+	--depth: 1;
+	--noise: 0;
+}

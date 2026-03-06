@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="shared-light">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shared UI Library — Component Showcase</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-base-100 text-base-content font-sans min-h-screen">
+		<!-- ─── Top Navbar ─────────────────────────────────────── -->
+		<header
+			class="sticky top-0 z-40 flex items-center justify-between border-b border-base-300/60 bg-base-100/80 backdrop-blur-md px-4 lg:px-6 h-14"
+		>
+			<div class="flex items-center gap-3">
+				<!-- Mobile menu toggle -->
+				<button id="mobile-menu-toggle" class="btn btn-ghost btn-sm btn-square lg:hidden" aria-label="Toggle sidebar">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="size-5"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<line x1="4" x2="20" y1="12" y2="12" />
+						<line x1="4" x2="20" y1="6" y2="6" />
+						<line x1="4" x2="20" y1="18" y2="18" />
+					</svg>
+				</button>
+
+				<!-- Logo / title -->
+				<div class="flex items-center gap-2">
+					<div class="size-7 rounded-lg bg-primary flex items-center justify-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="size-4 text-primary-content"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<rect width="7" height="7" x="3" y="3" rx="1" />
+							<rect width="7" height="7" x="14" y="3" rx="1" />
+							<rect width="7" height="7" x="14" y="14" rx="1" />
+							<rect width="7" height="7" x="3" y="14" rx="1" />
+						</svg>
+					</div>
+					<span class="font-semibold text-base tracking-tight">Shared UI Library</span>
+				</div>
+			</div>
+
+			<div class="flex items-center gap-2">
+				<!-- Theme toggle -->
+				<button id="theme-toggle" class="btn btn-ghost btn-sm btn-square" aria-label="Toggle theme"></button>
+			</div>
+		</header>
+
+		<!-- ─── Layout ─────────────────────────────────────────── -->
+		<div class="flex min-h-[calc(100vh-3.5rem)]">
+			<!-- Sidebar -->
+			<aside
+				id="sidebar"
+				class="fixed lg:sticky top-14 z-30 h-[calc(100vh-3.5rem)] w-60 shrink-0 border-r border-base-300/60 bg-base-100 overflow-y-auto p-4 transition-transform duration-200 -translate-x-full lg:translate-x-0"
+			>
+				<div class="mb-4">
+					<h2 class="text-xs font-semibold uppercase tracking-wider text-base-content/40 px-3 mb-2">Components</h2>
+					<nav id="sidebar-nav" class="flex flex-col gap-0.5"></nav>
+				</div>
+
+				<!-- Bottom info -->
+				<div class="mt-auto pt-6">
+					<div class="rounded-lg bg-base-200/50 p-3 text-xs text-base-content/50">
+						<p class="font-medium text-base-content/70 mb-1">How to use</p>
+						<p>Click <strong>"Copy Code"</strong> on any variant to copy the raw HTML. Paste it into your project.</p>
+					</div>
+				</div>
+			</aside>
+
+			<!-- Main content -->
+			<main id="main-content" class="flex-1 px-4 py-8 lg:px-10 lg:py-10 max-w-4xl mx-auto w-full"></main>
+		</div>
+
+		<!-- ─── Toast notification ─────────────────────────────── -->
+		<div id="toast" class="toast-notification alert alert-success text-sm shadow-elevated"></div>
+
+		<!-- ─── App entry ──────────────────────────────────────── -->
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
