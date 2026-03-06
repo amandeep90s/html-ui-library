@@ -5,6 +5,11 @@
 /* Tailwind base */
 @import "tailwindcss";
 
+/* JS config — loads tailwind.config.js for plugin compat &
+   IDE intellisense. CSS @theme tokens remain the runtime source
+   of truth and are imported below. */
+@config "../tailwind.config.js";
+
 /* Custom Tailwind design tokens */
 @import "./theme/tailwind-theme.css";
 
