@@ -1,0 +1,218 @@
+<!--
+  Badge Component
+  ===============
+  All badge variants matching shadcn/ui Badge component API.
+  Add new <ui-variant> blocks anywhere inside a <ui-section> to
+  extend the showcase. No JS changes needed.
+-->
+
+<ui-component
+	data-name="Badge"
+	data-description="Displays a badge or label. Useful for status indicators, counts, tags, and category labels."
+>
+	<!-- ── Variants ──────────────────────────────────────── -->
+	<ui-section data-title="Variants" data-description="Different visual styles for badges.">
+		<ui-variant data-label="Default / Primary">
+			<span class="badge badge-primary">Primary</span>
+		</ui-variant>
+
+		<ui-variant data-label="Secondary">
+			<span class="badge badge-secondary">Secondary</span>
+		</ui-variant>
+
+		<ui-variant data-label="Accent">
+			<span class="badge badge-accent">Accent</span>
+		</ui-variant>
+
+		<ui-variant data-label="Neutral">
+			<span class="badge badge-neutral">Neutral</span>
+		</ui-variant>
+
+		<ui-variant data-label="Ghost">
+			<span class="badge badge-ghost">Ghost</span>
+		</ui-variant>
+
+		<ui-variant data-label="Outline">
+			<span class="badge badge-outline">Outline</span>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Primary">
+			<span class="badge badge-outline badge-primary">Outline Primary</span>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Secondary">
+			<span class="badge badge-outline badge-secondary">Outline Secondary</span>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Semantic / Status ─────────────────────────────── -->
+	<ui-section data-title="Semantic / Status" data-description="Badges for info, success, warning, and error states.">
+		<ui-variant data-label="Info">
+			<span class="badge badge-info">Info</span>
+		</ui-variant>
+
+		<ui-variant data-label="Success">
+			<span class="badge badge-success">Success</span>
+		</ui-variant>
+
+		<ui-variant data-label="Warning">
+			<span class="badge badge-warning">Warning</span>
+		</ui-variant>
+
+		<ui-variant data-label="Error / Destructive">
+			<span class="badge badge-error">Destructive</span>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Sizes ─────────────────────────────────────────── -->
+	<ui-section data-title="Sizes" data-description="Badges come in four sizes.">
+		<ui-variant data-label="Extra Small">
+			<span class="badge badge-primary badge-xs">Extra Small</span>
+		</ui-variant>
+
+		<ui-variant data-label="Small">
+			<span class="badge badge-primary badge-sm">Small</span>
+		</ui-variant>
+
+		<ui-variant data-label="Medium (default)">
+			<span class="badge badge-primary badge-md">Medium</span>
+		</ui-variant>
+
+		<ui-variant data-label="Large">
+			<span class="badge badge-primary badge-lg">Large</span>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── With Icons ────────────────────────────────────── -->
+	<ui-section data-title="With Icons" data-description="Badges with icons for added context.">
+		<ui-variant data-label="Icon + Text">
+			<span class="badge badge-primary gap-1">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="size-3"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M20 6 9 17l-5-5" />
+				</svg>
+				Verified
+			</span>
+		</ui-variant>
+
+		<ui-variant data-label="Status Dot">
+			<span class="badge badge-outline gap-1.5">
+				<span class="size-2 rounded-full bg-success"></span>
+				Active
+			</span>
+		</ui-variant>
+
+		<ui-variant data-label="Removable / Closable">
+			<span class="badge badge-primary gap-1">
+				Tag
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="size-3 cursor-pointer"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M18 6 6 18" />
+					<path d="m6 6 12 12" />
+				</svg>
+			</span>
+		</ui-variant>
+
+		<ui-variant data-label="With Count">
+			<span class="badge badge-neutral gap-1">
+				Messages
+				<span class="badge badge-sm badge-primary">12</span>
+			</span>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Badge in Context ──────────────────────────────── -->
+	<ui-section data-title="Badge in Context" data-description="Badges used alongside other elements.">
+		<ui-variant data-label="Badge in Button">
+			<button class="btn btn-primary">
+				Inbox
+				<span class="badge badge-sm">+99</span>
+			</button>
+		</ui-variant>
+
+		<ui-variant data-label="Badge on Avatar (Indicator)">
+			<div class="indicator">
+				<span class="indicator-item badge badge-secondary badge-xs"></span>
+				<div class="avatar">
+					<div class="w-10 rounded-full bg-base-300">
+						<span class="flex items-center justify-center h-full text-xs font-medium text-base-content">AB</span>
+					</div>
+				</div>
+			</div>
+		</ui-variant>
+
+		<ui-variant data-label="Multiple Tags">
+			<div class="flex flex-wrap gap-1.5">
+				<span class="badge badge-primary badge-sm">React</span>
+				<span class="badge badge-secondary badge-sm">TypeScript</span>
+				<span class="badge badge-accent badge-sm">TailwindCSS</span>
+				<span class="badge badge-neutral badge-sm">Vite</span>
+			</div>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Soft / Outline Variants ───────────────────────── -->
+	<ui-section
+		data-title="Soft / Outline Variants"
+		data-description="Lighter badge styles with outline and soft backgrounds."
+	>
+		<ui-variant data-label="Soft Primary">
+			<span class="badge badge-soft badge-primary">Soft Primary</span>
+		</ui-variant>
+
+		<ui-variant data-label="Soft Secondary">
+			<span class="badge badge-soft badge-secondary">Soft Secondary</span>
+		</ui-variant>
+
+		<ui-variant data-label="Soft Success">
+			<span class="badge badge-soft badge-success">Soft Success</span>
+		</ui-variant>
+
+		<ui-variant data-label="Soft Warning">
+			<span class="badge badge-soft badge-warning">Soft Warning</span>
+		</ui-variant>
+
+		<ui-variant data-label="Soft Error">
+			<span class="badge badge-soft badge-error">Soft Error</span>
+		</ui-variant>
+
+		<ui-variant data-label="Soft Info">
+			<span class="badge badge-soft badge-info">Soft Info</span>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Empty / Dot Badge ─────────────────────────────── -->
+	<ui-section data-title="Empty / Dot Badge" data-description="Badges without text, used as status dots.">
+		<ui-variant data-label="Dot Primary">
+			<span class="badge badge-primary badge-xs"></span>
+		</ui-variant>
+
+		<ui-variant data-label="Dot Success">
+			<span class="badge badge-success badge-xs"></span>
+		</ui-variant>
+
+		<ui-variant data-label="Dot Warning">
+			<span class="badge badge-warning badge-xs"></span>
+		</ui-variant>
+
+		<ui-variant data-label="Dot Error">
+			<span class="badge badge-error badge-xs"></span>
+		</ui-variant>
+	</ui-section>
+</ui-component>

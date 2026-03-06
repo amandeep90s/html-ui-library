@@ -13,13 +13,9 @@ function escapeHtml(str) {
 	return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-// ── Utility: format / indent HTML for display ────────────────
+// ── Utility: format HTML for display (already dedented by parser) ──
 function formatHtml(html) {
-	return html
-		.split("\n")
-		.map((line) => line.replace(/^ {2}/, "")) // remove leading 2-space indent from template literals
-		.join("\n")
-		.trim();
+	return html.trim();
 }
 
 // ── Copy to clipboard ────────────────────────────────────────

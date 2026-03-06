@@ -1,0 +1,231 @@
+<!--
+  Button Component
+  ================
+  All button variants matching shadcn/ui Button component API.
+  Add new <ui-variant> blocks anywhere inside a <ui-section> to
+  extend the showcase. No JS changes needed.
+-->
+
+<ui-component
+	data-name="Button"
+	data-description="Displays a button or a component that looks like a button. Supports multiple variants, sizes, and states."
+>
+	<!-- ── Variants ──────────────────────────────────────── -->
+	<ui-section data-title="Variants" data-description="Different visual styles for different contexts.">
+		<ui-variant data-label="Default / Primary">
+			<button class="btn btn-primary">Primary</button>
+		</ui-variant>
+
+		<ui-variant data-label="Secondary">
+			<button class="btn btn-secondary">Secondary</button>
+		</ui-variant>
+
+		<ui-variant data-label="Accent">
+			<button class="btn btn-accent">Accent</button>
+		</ui-variant>
+
+		<ui-variant data-label="Neutral">
+			<button class="btn btn-neutral">Neutral</button>
+		</ui-variant>
+
+		<ui-variant data-label="Ghost">
+			<button class="btn btn-ghost">Ghost</button>
+		</ui-variant>
+
+		<ui-variant data-label="Link">
+			<button class="btn btn-link">Link</button>
+		</ui-variant>
+
+		<ui-variant data-label="Outline">
+			<button class="btn btn-outline">Outline</button>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Primary">
+			<button class="btn btn-outline btn-primary">Outline Primary</button>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Secondary">
+			<button class="btn btn-outline btn-secondary">Outline Secondary</button>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Semantic / Status ─────────────────────────────── -->
+	<ui-section data-title="Semantic / Status" data-description="Buttons for success, warning, info, and error states.">
+		<ui-variant data-label="Info">
+			<button class="btn btn-info">Info</button>
+		</ui-variant>
+
+		<ui-variant data-label="Success">
+			<button class="btn btn-success">Success</button>
+		</ui-variant>
+
+		<ui-variant data-label="Warning">
+			<button class="btn btn-warning">Warning</button>
+		</ui-variant>
+
+		<ui-variant data-label="Error / Destructive">
+			<button class="btn btn-error">Destructive</button>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Error">
+			<button class="btn btn-outline btn-error">Outline Destructive</button>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Sizes ─────────────────────────────────────────── -->
+	<ui-section data-title="Sizes" data-description="Buttons come in four sizes.">
+		<ui-variant data-label="Extra Small">
+			<button class="btn btn-primary btn-xs">Extra Small</button>
+		</ui-variant>
+
+		<ui-variant data-label="Small">
+			<button class="btn btn-primary btn-sm">Small</button>
+		</ui-variant>
+
+		<ui-variant data-label="Medium (default)">
+			<button class="btn btn-primary btn-md">Medium</button>
+		</ui-variant>
+
+		<ui-variant data-label="Large">
+			<button class="btn btn-primary btn-lg">Large</button>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Wide & Block ──────────────────────────────────── -->
+	<ui-section data-title="Wide &amp; Block" data-description="Buttons that stretch wider or take full width.">
+		<ui-variant data-label="Wide">
+			<button class="btn btn-primary btn-wide">Wide</button>
+		</ui-variant>
+
+		<ui-variant data-label="Block (Full Width)">
+			<button class="btn btn-primary btn-block">Block / Full Width</button>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── With Icons ────────────────────────────────────── -->
+	<ui-section data-title="With Icons" data-description="Buttons with leading or trailing icons using inline SVG.">
+		<ui-variant data-label="Icon Left">
+			<button class="btn btn-primary">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="size-4"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M5 12h14" />
+					<path d="m12 5 7 7-7 7" />
+				</svg>
+				Continue
+			</button>
+		</ui-variant>
+
+		<ui-variant data-label="Icon Right">
+			<button class="btn btn-primary">
+				Send
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="size-4"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M5 12h14" />
+					<path d="m12 5 7 7-7 7" />
+				</svg>
+			</button>
+		</ui-variant>
+
+		<ui-variant data-label="Icon Only (Square)">
+			<button class="btn btn-primary btn-square">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="size-5"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M12 5v14" />
+					<path d="M5 12h14" />
+				</svg>
+			</button>
+		</ui-variant>
+
+		<ui-variant data-label="Icon Only (Circle)">
+			<button class="btn btn-primary btn-circle">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="size-5"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M12 5v14" />
+					<path d="M5 12h14" />
+				</svg>
+			</button>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── States ────────────────────────────────────────── -->
+	<ui-section data-title="States" data-description="Disabled and loading states.">
+		<ui-variant data-label="Disabled">
+			<button class="btn btn-primary" disabled>Disabled</button>
+		</ui-variant>
+
+		<ui-variant data-label="Loading">
+			<button class="btn btn-primary">
+				<span class="loading loading-spinner loading-sm"></span>
+				Loading
+			</button>
+		</ui-variant>
+
+		<ui-variant data-label="Loading (no text)">
+			<button class="btn btn-primary btn-square">
+				<span class="loading loading-spinner"></span>
+			</button>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── Button Group ───────────────────────────────────── -->
+	<ui-section data-title="Button Group" data-description="Group buttons together with a join container.">
+		<ui-variant data-label="Horizontal Group">
+			<div class="join">
+				<button class="btn btn-primary join-item">Left</button>
+				<button class="btn btn-primary join-item">Center</button>
+				<button class="btn btn-primary join-item">Right</button>
+			</div>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Group">
+			<div class="join">
+				<button class="btn btn-outline join-item">Year</button>
+				<button class="btn btn-outline btn-active join-item">Month</button>
+				<button class="btn btn-outline join-item">Day</button>
+			</div>
+		</ui-variant>
+	</ui-section>
+
+	<!-- ── As Link ───────────────────────────────────────── -->
+	<ui-section data-title="As Link" data-description="Buttons rendered as anchor elements.">
+		<ui-variant data-label="Link as Button">
+			<a href="#" class="btn btn-primary">Link Button</a>
+		</ui-variant>
+
+		<ui-variant data-label="Outline Link">
+			<a href="#" class="btn btn-outline btn-primary">Outline Link</a>
+		</ui-variant>
+	</ui-section>
+</ui-component>

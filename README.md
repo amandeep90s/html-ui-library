@@ -146,9 +146,9 @@ html-ui-library/
     │   └── daisyui-theme.css   # ★ @plugin themes: shared-light + shared-dark
     │
     └── components/
-        ├── index.js            # Registry — import components here to add to sidebar
-        ├── button.js           # Button variants (25 variants across 7 sections)
-        └── badge.js            # Badge variants (24 variants across 7 sections)
+        ├── index.js            # Registry — imports .html files via ?raw, parses them
+        ├── button.html         # Button variants (25 variants across 7 sections)
+        └── badge.html          # Badge variants (24 variants across 7 sections)
 ```
 
 ### CSS Import Chain
@@ -296,40 +296,31 @@ Copy any HTML snippet from the showcase and paste it into your template:
 
 ## Adding New Components
 
-1. Create `src/components/<name>.js` and export a component object:
+1. Create `src/components/<name>.html` using `<ui-component>`, `<ui-section>`, and `<ui-variant>` elements:
 
-```js
-// src/components/input.js
-export const inputComponent = {
-	name: "Input",
-	description: "A text input field with multiple variants and states.",
-	sections: [
-		{
-			title: "Variants",
-			description: "Different input styles.",
-			variants: [
-				{
-					label: "Bordered (default)",
-					html: `<input type="text" placeholder="Type here…" class="input input-bordered w-full max-w-xs" />`,
-				},
-				{
-					label: "Ghost",
-					html: `<input type="text" placeholder="Ghost input" class="input input-ghost w-full max-w-xs" />`,
-				},
-			],
-		},
-	],
-};
+```html
+<!-- src/components/input.html -->
+<ui-component data-name="Input" data-description="A text input field with multiple variants and states.">
+	<ui-section data-title="Variants" data-description="Different input styles.">
+		<ui-variant data-label="Bordered (default)">
+			<input type="text" placeholder="Type here…" class="input input-bordered w-full max-w-xs" />
+		</ui-variant>
+
+		<ui-variant data-label="Ghost">
+			<input type="text" placeholder="Ghost input" class="input input-ghost w-full max-w-xs" />
+		</ui-variant>
+	</ui-section>
+</ui-component>
 ```
 
 2. Register it in `src/components/index.js`:
 
 ```js
-import { buttonComponent } from "./button.js";
-import { badgeComponent } from "./badge.js";
-import { inputComponent } from "./input.js"; // ← add this
+import buttonHtml from "./button.html?raw";
+import badgeHtml from "./badge.html?raw";
+import inputHtml from "./input.html?raw"; // ← add this
 
-export const components = [buttonComponent, badgeComponent, inputComponent];
+export const components = [buttonHtml, badgeHtml, inputHtml].map(parseComponent).filter(Boolean);
 ```
 
 The new component appears automatically in the sidebar — no other changes needed.
